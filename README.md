@@ -54,4 +54,4 @@ The html templates are in the base/templates/base folder.
 
 the project level python files are in the teammanagement folder in the base directoy.
 
-the app level python files are in the base folder in the base directory.
+the app level python files are in the base folder in the main directory.
