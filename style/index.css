@@ -76,7 +76,7 @@ input {
 
 }
 
-.task-wrapper {
+.member-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -85,12 +85,12 @@ input {
     overflow: hidden;
 }
 
-.task-title {
+.member-title {
     display: flex;
     padding: 20px;
 }
 
-.task-title a {
+.member-title a {
     text-decoration: none;
     color: #4b5156;
     margin-left: 10px;
@@ -98,8 +98,7 @@ input {
 
 }
 
-        .task-complete-icon,
-.task-incomplete-icon {
+        .member-icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,8 +106,8 @@ input {
     width: 50px;
 }
 
-.task-complete-icon img,
-.task-incomplete-icon img {
+.member-icon img
+ {
     object-fit: contain;
     height: 100%;
     width: 100%;
@@ -175,12 +174,6 @@ input {
     background-color: white;
 }
 
-#search-add-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
 
 @media screen and (max-width:320px) {
     #search-add-wrapper {
@@ -241,7 +234,7 @@ textarea {
     text-align: center;
     margin-top: 10px;
     position: absolute;
-    left: 57.5%;
+    left: 55.5%;
 
 
 }

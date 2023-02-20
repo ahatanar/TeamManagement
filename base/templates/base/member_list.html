@@ -17,17 +17,17 @@
 
 
     
-<div id="tasklist" class="task-items-wrapper">
+<div id="memberlist" class="member-items-wrapper">
     {% for member in members %}
-    <div class="task-wrapper" data-position="{{member.pk}}">
-        <div class="task-title">
+    <div class="member-wrapper" data-position="{{member.pk}}">
+        <div class="member-title">
             {% if member.role == "admin" %}
-            <div class="task-complete-icon">
+            <div class="member-icon">
                 <img src="/media/user.jpg" alt="User Image">
             </div>
             <a href="{% url 'member-edit' member.id %}"> <div class="nametext">{{member.first}} {{member.last}} (Admin)</div> <br> <div class="othertext">{{member.number}}</div> <br> <div class="othertext">{{member.email}}</div></a>
             {% else %}
-            <div class="task-complete-icon">
+            <div class="member-icon">
                 <img src="/media/user.jpg" alt="User Image">
             </div>
             <a href="{% url 'member-edit' member.id %}"><div class="nametext">{{member.first}} {{member.last}}</div><br><div class="othertext">{{member.number}}</div> <br> <div class="othertext">{{member.email}}</div> </a>
