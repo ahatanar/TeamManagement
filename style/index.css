@@ -98,7 +98,7 @@ input {
 
 }
 
-.member-icon {
+    .member-icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,6 +125,7 @@ input {
 }
 
 
+
 .title-header{
     padding:5px;
     background-color: rgba(206, 231, 233, 0.979);
@@ -136,11 +137,7 @@ input {
     
 }
 
-.dropArea {
-    background-color: #f1f2f6;
-    color: black;
-    border: #ced6e0 1px solid;
-}
+
 
 
 #addlink {
@@ -152,13 +149,15 @@ input {
 }
 
 
+
 @media screen and (max-width:320px) {
     #search-add-wrapper {
         padding: 10px;
     }
 }
 
-
+input[type=text],
+input[type=password],
 textarea {
     border: 1px solid lightgray;
     padding: 10px;
@@ -166,11 +165,6 @@ textarea {
 }
 
 
-
-::placeholder {
-    font-weight: 300;
-    opacity: 0.5;
-}
 
 /* .button {
     border: 1px solid #757575;
@@ -210,7 +204,7 @@ textarea {
     text-align: center;
     margin-top: 10px;
     position: absolute;
-    margin-left: 290px;
+    left: 55.5%;
 
 
 }
