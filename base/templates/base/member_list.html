@@ -9,14 +9,10 @@
          <a id ="addlink" href="{% url 'member-create' %}">&#x2b;</a>
         <h1 >Team Members            </h1>
         <h3>You have <i>{{count}}</i> member{{ count|pluralize:"s" }}</h3>
-
     </div>
-
 </div>
 
 
-
-    
 <div id="memberlist" class="member-items-wrapper">
     {% for member in members %}
     <div class="member-wrapper" data-position="{{member.pk}}">

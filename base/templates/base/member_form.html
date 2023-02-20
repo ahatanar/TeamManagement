@@ -21,7 +21,9 @@
 
 </div>
 
+
 <script>
+  //Script to handle the bolding of the multiple choice role answers 
   const adminRadio = document.getElementById('id_role_0');
   const regularRadio = document.getElementById('id_role_1');
   const adminLabel = document.querySelector('label[for="id_role_0"]');
@@ -33,7 +35,6 @@
     adminLabel.classList.add('bold');
     // Remove the "bold" class from the regular label
     regularLabel.classList.remove('bold');
-    // Add the "lightgray" class to the regular label
   });
   
   // Add an event listener to the regular radio button
@@ -42,8 +43,8 @@
     regularLabel.classList.add('bold');
     // Remove the "bold" class from the admin label
     adminLabel.classList.remove('bold');
-    // Add the "lightgray" class to the admin label
   });
+  // to load in the value selected and bold it, or bold the regular option on the create page
   document.addEventListener("DOMContentLoaded", function() {
     const selectedRadio = document.querySelector(".role-select:checked");
     const selectedLabel = document.querySelector(`label[for="${selectedRadio.id}"]`);
