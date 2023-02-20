@@ -33,10 +33,16 @@ venv\Scripts\activate
 
 Note: If you're using a different operating system, the activation command may be slightly different. See the Python documentation for more information.
 
-### 5. Start the project by running the following command:
+### 5. install django inside the virtual enviroment:
+
+pip install django
+
+### 6. Start the project by running the following command:
 
 python manage.py runserver
 
 ### This should start the Django development server and display the URL where you can access the project in your web browser.
 
 ## Testing
+Run python manage.py test
+to ensure everything is working properly.
