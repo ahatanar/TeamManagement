@@ -13,7 +13,9 @@ To get started with this project, follow these steps:
 
 
 git clone git@github.com:ahatanar/TeamManagement.git
+
 Navigate to the main project directory:
+
 cd TeamManagement
 
 ### 2. Install the virtual enviroment:
