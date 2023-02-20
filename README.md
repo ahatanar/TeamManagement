@@ -31,7 +31,7 @@ venv\Scripts\activate
 
 Note: If you're using a different operating system, the activation command may be slightly different. See the Python documentation for more information.
 
-# 5##. Start the project by running the following command:
+### 5. Start the project by running the following command:
 
 python manage.py runserver
 
