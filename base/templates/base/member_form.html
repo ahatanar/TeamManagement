@@ -1,0 +1,83 @@
+
+{% extends 'base/main.html' %}
+{% block content %}
+
+<div class="title-header">
+  <a href="{% url 'members' %}">&#8592; Back</a>
+  <h1>Add Page</h1>
+</div>
+
+<div class="card-body">
+  <h2>Add a team member</h2>
+  <h3 class="text">Set email, location, and role</h3>
+  <hr class="custom-hr">
+  <h3 class="info">Info</h3>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{form.as_p}}
+        <hr class="custom-hr">
+        <input class="savebutton1" type="submit" value="  Save  ">
+    </form>
+
+</div>
+
+<script>
+  const adminRadio = document.getElementById('id_role_0');
+  const regularRadio = document.getElementById('id_role_1');
+  const adminLabel = document.querySelector('label[for="id_role_0"]');
+  const regularLabel = document.querySelector('label[for="id_role_1"]');
+  
+  // Add an event listener to the admin radio button
+  adminRadio.addEventListener('click', () => {
+    // Add the "bold" class to the admin label
+    adminLabel.classList.add('bold');
+    // Remove the "bold" class from the regular label
+    regularLabel.classList.remove('bold');
+    // Add the "lightgray" class to the regular label
+  });
+  
+  // Add an event listener to the regular radio button
+  regularRadio.addEventListener('click', () => {
+    // Add the "bold" class to the regular label
+    regularLabel.classList.add('bold');
+    // Remove the "bold" class from the admin label
+    adminLabel.classList.remove('bold');
+    // Add the "lightgray" class to the admin label
+  });
+  document.addEventListener("DOMContentLoaded", function() {
+    const selectedRadio = document.querySelector(".role-select:checked");
+    const selectedLabel = document.querySelector(`label[for="${selectedRadio.id}"]`);
+    selectedLabel.classList.add("bold");
+  });
+  </script>
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

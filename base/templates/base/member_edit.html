@@ -1,0 +1,61 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+<div class="title-header">
+    <h1>Edit Page</h1>
+    <a href="{% url 'members' %}">&#8592; Back</a>
+</div>
+
+<div class="card-body">
+    <h2>Edit team member</h2>
+    <h3 class="text">edit contact info location, role</h3>
+    <hr class="custom-hr">
+    <h3 class="info">Info</h3>
+    <form id="delete-form" method="POST" action="{% url 'member-delete' member.id %}">
+        {% csrf_token %}
+    </form>
+    <form id="edit-form" method="POST" action="{% url 'member-edit' member.id %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <hr class="custom-hr">
+        <input class="savebutton2" type="submit" value="  Save  ">
+    </form>
+        <button class="deletebutton" type="button" onclick="document.getElementById('delete-form').submit()">Delete</button>
+</div>
+
+
+
+
+
+
+<script>
+const adminRadio = document.getElementById('id_role_0');
+const regularRadio = document.getElementById('id_role_1');
+const adminLabel = document.querySelector('label[for="id_role_0"]');
+const regularLabel = document.querySelector('label[for="id_role_1"]');
+
+// Add an event listener to the admin radio button
+adminRadio.addEventListener('click', () => {
+  // Add the "bold" class to the admin label
+  adminLabel.classList.add('bold');
+  // Remove the "bold" class from the regular label
+  regularLabel.classList.remove('bold');
+  // Add the "lightgray" class to the regular label
+});
+
+// Add an event listener to the regular radio button
+regularRadio.addEventListener('click', () => {
+  // Add the "bold" class to the regular label
+  regularLabel.classList.add('bold');
+  // Remove the "bold" class from the admin label
+  adminLabel.classList.remove('bold');
+  // Add the "lightgray" class to the admin label
+});
+document.addEventListener("DOMContentLoaded", function() {
+  const selectedRadio = document.querySelector(".role-select:checked");
+  const selectedLabel = document.querySelector(`label[for="${selectedRadio.id}"]`);
+  selectedLabel.classList.add("bold");
+});
+</script>
+
+{% endblock content %}

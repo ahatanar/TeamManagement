@@ -1,0 +1,49 @@
+{% extends 'base/main.html' %} {% block content %}
+
+<div class="title-header">
+    <h1>List Page</h1>
+</div>
+
+<div class="header-bar">
+    <div>
+         <a id ="addlink" href="{% url 'member-create' %}">&#x2b;</a>
+        <h1 >Team Members            </h1>
+        <h3>You have <i>{{count}}</i> member{{ count|pluralize:"s" }}</h3>
+
+    </div>
+
+</div>
+
+
+
+    
+<div id="tasklist" class="task-items-wrapper">
+    {% for member in members %}
+    <div class="task-wrapper" data-position="{{member.pk}}">
+        <div class="task-title">
+            {% if member.role == "admin" %}
+            <div class="task-complete-icon">
+                <img src="/media/user.jpg" alt="User Image">
+            </div>
+            <a href="{% url 'member-edit' member.id %}"> <div class="nametext">{{member.first}} {{member.last}} (Admin)</div> <br> <div class="othertext">{{member.number}}</div> <br> <div class="othertext">{{member.email}}</div></a>
+            {% else %}
+            <div class="task-complete-icon">
+                <img src="/media/user.jpg" alt="User Image">
+            </div>
+            <a href="{% url 'member-edit' member.id %}"><div class="nametext">{{member.first}} {{member.last}}</div><br><div class="othertext">{{member.number}}</div> <br> <div class="othertext">{{member.email}}</div> </a>
+            {% endif %}
+        </div>
+       
+    </div>
+    {% empty %}
+    <div style="text-align: center; padding-bottom: 10px; line-height: 1em;">
+        <h3>No new tasks are created.</h3>
+        <h3>Create a <a style="text-decoration: none; color: #e53935;" href="{% url 'member-create' %}">New task</a> ! </h3>
+    </div>
+    {% endfor %}
+</div>
+
+
+
+
+{% endblock content %}
