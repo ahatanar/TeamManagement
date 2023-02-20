@@ -1,6 +1,6 @@
 # My Project
 ## Overview
-This is a Django-based project that allows users to [insert project description here].
+This is a Django-based project that allows users to create and manage team members
 
 ## Prerequisites
 To run this project, you must have Python 3.8 or higher installed on your system. If you don't have Python installed, you can download it from the official website: https://www.python.org/downloads/.
@@ -12,14 +12,14 @@ To get started with this project, follow these steps:
 
 
 
-git clone <repository URL>
+git clone git@github.com:ahatanar/TeamManagement.git
 Navigate to the main project directory:
-cd myproject
+cd TeamManagement
 
-### 2. Install the required dependencies using pip:
+### 2. Install the virtual enviroment:
 
 pip install venv
-pip install django
+
 
 ### 3. Create a new virtual environment using the following command:
 
@@ -36,3 +36,5 @@ Note: If you're using a different operating system, the activation command may b
 python manage.py runserver
 
 ### This should start the Django development server and display the URL where you can access the project in your web browser.
+
+## Testing
